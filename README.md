@@ -7,6 +7,8 @@ public interface MyProperties extends PropertyBinder {
   /**
    * Getter for the superdevmode property.
    */
-  boolean superDevMode();
+  @PropertyName("superdevmode")
+  @TrueWhen(value = "on")
+  boolean isSuperDevMode();
 }
 ```
